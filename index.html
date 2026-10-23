@@ -314,8 +314,6 @@ footer p{margin:0;color:var(--ink-soft);font-size:14px}
   /* ===== CONFIGURAÇÃO ===== */
   // Número do WhatsApp com 55 + DDD + número, só dígitos (ex.: "5511999999999").
   var WHATSAPP_NUMBER = "5511947556629";
-  // Link do Apps Script da planilha (termina em /exec).
-  var SHEETS_URL = "https://script.google.com/macros/s/AKfycbyAnft_HJcjcKFp1FGy2z-pCkyppMBelQacSFZKT6OZJLYcpUP7Saw3dE4ozIs4Nou7vQ/exec";
   var QR_LINK = "https://wa.me/qr/B7TK6KDSIT3QP1";
   /* ======================== */
 
@@ -342,13 +340,6 @@ footer p{margin:0;color:var(--ink-soft);font-size:14px}
     if (/^@[a-z0-9._]{2,30}$/i.test(v)) return true;
     if (/instagram\.com\/[a-z0-9._]{2,30}/i.test(v)) return true;
     return /^(https?:\/\/)?(www\.)?([a-z0-9-]+\.)+[a-z]{2,}(\/\S*)?$/i.test(v);
-  }
-  function saveToSheet(d){
-    if (!SHEETS_URL) return;
-    try {
-      fetch(SHEETS_URL, {method: "POST", mode: "no-cors", keepalive: true,
-        headers: {"Content-Type": "text/plain;charset=utf-8"}, body: JSON.stringify(d)});
-    } catch (e) {}
   }
 
   form.addEventListener("submit", function(ev){
@@ -388,7 +379,6 @@ footer p{margin:0;color:var(--ink-soft);font-size:14px}
       "*Busco:* " + d.busca + "\n" +
       "*Maior desafio:* " + d.problema;
 
-    saveToSheet(d);
 
     var wa = document.getElementById("wa"), text = document.getElementById("done-text");
     document.getElementById("preview").textContent = message;

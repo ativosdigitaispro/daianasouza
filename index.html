@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ativosdigitaispro.github.io/daianasouza/">
+<meta property="og:title" content="Daiana Souza · Ativos Digitais Pro">
+<meta property="og:description" content="Estratégia de marca e vendas para quem fatura, mas vive com o caixa apertado.">
+<meta property="og:image" content="https://ativosdigitaispro.github.io/daianasouza/img/hero.jpg">
+<meta name="theme-color" content="#E7DED4">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Daiana Souza · Ativos Digitais Pro</title>
+<meta name="description" content="Estratégia de marca e vendas para quem fatura, mas vive com o caixa apertado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700&display=swap">
+<style>
+/* Layout: página de bio enxuta. Abertura (texto + foto em arco), 3 frentes, formulário com foto em arco.
+   Mesma linguagem dos stories: creme, café, cobre, sans pesada + serifada itálica. */
+:root{
+  --bg:#E7DED4;
+  --surface:#FBF8F4;
+  --surface-2:#F1E9E0;
+  --ink:#2E1B17;
+  --ink-soft:#5E4639;
+  --copper:#A8704F;
+  --copper-text:#8A5634;
+  --line:#D8C6B8;
+  --block-bg:#2E1B17;
+  --block-fg:#FBF8F4;
+  --block-accent:#D9A784;
+  --error:#A3271B;
+  --photo-fade:.22;
+  --shadow:0 24px 48px -30px rgba(46,27,23,.5);
+  --f-sans:"Inter Tight",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-serif:"Playfair Display",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1D1310;--surface:#2A1D18;--surface-2:#35261F;--ink:#F3EAE1;--ink-soft:#CDB9AA;
+    --copper:#D9A784;--copper-text:#E2B590;--line:#4A3830;--block-bg:#F3EAE1;--block-fg:#2E1B17;--block-accent:#8A5634;
+    --error:#F08A7E;--photo-fade:.14;--shadow:0 24px 48px -30px rgba(0,0,0,.7);color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1D1310;--surface:#2A1D18;--surface-2:#35261F;--ink:#F3EAE1;--ink-soft:#CDB9AA;
+  --copper:#D9A784;--copper-text:#E2B590;--line:#4A3830;--block-bg:#F3EAE1;--block-fg:#2E1B17;--block-accent:#8A5634;
+  --error:#F08A7E;--photo-fade:.14;--shadow:0 24px 48px -30px rgba(0,0,0,.7);color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:17px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+em.s{font-family:var(--f-serif);font-style:italic;font-weight:600;letter-spacing:-.01em}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-text)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--copper);outline-offset:3px;border-radius:6px}
+
+/* Cabeçalho */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px 8px}
+.logo{font-weight:800;font-size:clamp(26px,6.5vw,34px);line-height:1;letter-spacing:-.035em;text-decoration:none}
+.logo i{font-family:var(--f-serif);font-weight:700;display:block;padding-left:.55em;letter-spacing:-.01em}
+.ig{font-size:14px;font-weight:700;text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:9px 14px;white-space:nowrap}
+
+/* Moldura padrão das fotos: arco com aro cobre */
+.arch{position:relative;width:100%;justify-self:center}
+.arch img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 28px 28px;box-shadow:0 0 0 8px var(--bg),0 0 0 11px var(--copper),var(--shadow)}
+
+/* Abertura */
+.hero{display:grid;gap:28px;padding-block:20px 40px}
+.hero .arch{max-width:240px}
+@media (min-width:820px){.hero{grid-template-columns:1.15fr .85fr;align-items:center;gap:48px;padding-block:24px 56px}.hero .arch{max-width:380px}}
+.hero h1{margin:10px 0 0;font-size:clamp(60px,15vw,116px);line-height:.86;font-weight:800;letter-spacing:-.05em}
+.hero h1 em{display:block}
+.lead{margin:20px 0 0;font-size:clamp(20px,4.8vw,24px);line-height:1.28;font-weight:700;letter-spacing:-.015em;max-width:28ch}
+.lead span{color:var(--copper-text)}
+.cred{margin:12px 0 0;color:var(--ink-soft);font-size:16px;max-width:44ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font:800 16px/1 var(--f-sans);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:0;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--block-bg);color:var(--block-fg)}
+.btn-light{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.hero .btn{margin-top:22px}
+.float{position:absolute;left:-10px;bottom:22px;max-width:220px;background:var(--surface);border-radius:20px;padding:12px 16px;box-shadow:var(--shadow);transform:rotate(-3deg);font-weight:700;font-size:15px;line-height:1.3}
+.float small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-text);margin-bottom:2px}
+
+/* Frentes */
+section{padding-block:28px}
+h2{margin:0 0 18px;font-size:clamp(36px,8vw,56px);line-height:.92;font-weight:800;letter-spacing:-.045em}
+.fronts{display:grid;gap:12px}
+@media (min-width:760px){.fronts{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.front{background:var(--surface);border-radius:24px;padding:20px 22px;box-shadow:var(--shadow);display:grid;gap:6px;align-content:start}
+.front h3{margin:0;font-size:21px;line-height:1.1;letter-spacing:-.02em}
+.front p{margin:0;color:var(--ink-soft);font-size:16px}
+.front.dark{background:var(--block-bg);color:var(--block-fg)}
+.front.dark p{color:inherit;opacity:.82}
+.note{margin:14px 0 0;font-size:15px;color:var(--ink-soft)}
+.note b{color:var(--copper-text)}
+
+/* Contato */
+.contact{display:grid;gap:24px;align-items:start}
+.contact .arch{max-width:190px}
+@media (min-width:860px){.contact{grid-template-columns:.75fr 1.25fr;gap:44px}.contact .arch{max-width:340px}}
+.side{display:grid;gap:20px;justify-items:center}
+.fit{background:var(--block-bg);color:var(--block-fg);border-radius:24px;padding:20px 22px;display:grid;gap:8px;width:100%}
+.fit h3{margin:0;font-size:18px}
+.fit ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.fit li{display:flex;gap:10px;font-weight:600;font-size:15px}
+.fit li b{color:var(--block-accent)}
+form{position:relative;isolation:isolate;overflow:hidden;background:var(--surface);border-radius:28px;padding:24px;box-shadow:var(--shadow);display:grid;gap:18px}
+form::before{content:"";position:absolute;inset:0;z-index:-2;background:url("img/fundo.jpg") center 18%/cover no-repeat;opacity:var(--photo-fade);filter:saturate(.8)}
+form::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 0%,transparent 18%,var(--surface) 72%)}
+@media (min-width:560px){form{padding:32px}}
+.form-head p{margin:6px 0 0;color:var(--ink-soft);font-size:16px}
+.two{display:grid;gap:18px}
+@media (min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.field{display:grid;gap:7px;min-width:0}
+.field label,.field legend{font-weight:800;font-size:15px;padding:0}
+.hint{font-size:13px;color:var(--ink-soft);margin-top:-3px}
+.req{color:var(--copper-text)}
+input[type=text],textarea{width:100%;font:500 16px/1.4 var(--f-sans);color:var(--ink);background:var(--surface-2);border:2px solid transparent;border-radius:14px;padding:13px 15px;min-height:52px}
+textarea{min-height:104px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--copper)}
+input::placeholder,textarea::placeholder{color:var(--ink-soft);opacity:.7}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative}
+.pill input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.pill span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--line);font-weight:700;font-size:15px;background:var(--surface)}
+.pill input:checked + span{background:var(--block-bg);color:var(--block-fg);border-color:var(--block-bg)}
+.pill input:focus-visible + span{outline:3px solid var(--copper);outline-offset:2px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:600;font-size:15px;cursor:pointer}
+.check input{width:22px;height:22px;margin:1px 0 0;accent-color:var(--copper);flex:0 0 auto}
+.err{color:var(--error);font-size:13px;font-weight:700}
+.err:empty{display:none}
+.field.invalid input,.field.invalid textarea{border-color:var(--error)}
+.count{font-size:12px;color:var(--ink-soft);justify-self:end}
+.submit{width:100%;min-height:60px}
+.fine{margin:0;font-size:13px;color:var(--ink-soft);text-align:center}
+.done{background:var(--surface);border-radius:28px;padding:28px;box-shadow:var(--shadow);display:grid;gap:14px}
+.done-top{display:flex;align-items:center;gap:20px}.arch.mini{max-width:110px;flex:0 0 110px}.arch.mini img{box-shadow:0 0 0 5px var(--surface),0 0 0 7px var(--copper)}
+.done h3{margin:0;font-size:clamp(28px,6vw,36px);line-height:.95;letter-spacing:-.04em}
+.done p{margin:0}
+.done pre{margin:0;white-space:pre-wrap;word-break:break-word;background:var(--surface-2);border-radius:16px;padding:16px;font:500 14px/1.5 var(--f-sans);max-height:260px;overflow:auto}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.status{font-weight:700;color:var(--copper-text);min-height:1.4em}
+.link-btn{background:none;border:0;padding:0;font:700 14px var(--f-sans);text-decoration:underline;cursor:pointer;color:var(--ink-soft);justify-self:start}
+
+footer{padding-block:28px 40px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;border-top:2px solid var(--line);padding-top:20px}
+footer p{margin:0;color:var(--ink-soft);font-size:14px}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#inicio" aria-label="Ativos Digitais Pro">ATIVOS<i>Digitais</i>PRO</a>
+    <a class="ig" href="https://www.instagram.com/ativosdigitais.pro/" target="_blank" rel="noopener">@ativosdigitais.pro</a>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Estrategista de marca e vendas</div>
+        <h1>Prazer, <em class="s">Daiana.</em></h1>
+        <p class="lead">Faço negócios pararem de parecer “só mais um” e <span>lucrarem de verdade.</span></p>
+        <p class="cred">Mais de 15 anos nos bastidores do marketing digital, com marcas, dados e performance.</p>
+        <a class="btn btn-dark" href="#contato">Quero conversar <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="arch">
+        <img src="img/hero.jpg" alt="Daiana Souza com a mão apoiada no queixo, olhando para a câmera" width="900" height="1125">
+        <div class="float"><small>Pra quem é</small>Quem fatura, mas vive com o caixa apertado.</div>
+      </div>
+    </div>
+
+    <section aria-labelledby="t-frentes">
+      <h2 id="t-frentes">Como eu <em class="s">ajudo.</em></h2>
+      <div class="fronts">
+        <article class="front">
+          <h3>Branding e posicionamento</h3>
+          <p>Pra sua marca ser escolhida pelo valor, não pelo preço.</p>
+        </article>
+        <article class="front">
+          <h3>Arquitetura de vendas</h3>
+          <p>Oferta, preço com margem e um processo que fecha sem depender de desconto.</p>
+        </article>
+        <article class="front dark">
+          <h3>Diagnóstico</h3>
+          <p>Pra quem sente que algo trava, mas não sabe o quê. É a porta de entrada.</p>
+        </article>
+      </div>
+      <p class="note"><b>Valores sob consulta.</b> Cada negócio pede um plano diferente.</p>
+    </section>
+
+    <section id="contato" aria-labelledby="t-contato">
+      <div class="contact">
+        <div class="side">
+          <div class="arch">
+            <img src="img/contato.jpg" alt="Daiana com a mão apoiada no ombro, olhando para baixo" width="900" height="1125">
+          </div>
+          <div class="fit">
+            <h3>É pra você se</h3>
+            <ul>
+              <li><b aria-hidden="true">✓</b>Já tem clientes e quer margem de verdade.</li>
+              <li><b aria-hidden="true">✓</b>Topa rever preço, oferta e processo.</li>
+              <li><b aria-hidden="true">✓</b>Quer estratégia, não fórmula pronta.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <form id="lead" novalidate>
+            <div class="form-head">
+              <h2 id="t-contato" style="margin:0">Bora <em class="s">conversar?</em></h2>
+              <p>Conta rapidinho sobre o seu negócio. Suas respostas vão prontas pro meu WhatsApp.</p>
+            </div>
+
+            <div class="two">
+              <div class="field" id="f-nome">
+                <label for="nome">Seu nome <span class="req">*</span></label>
+                <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como posso te chamar?">
+                <div class="err" id="e-nome" aria-live="polite"></div>
+              </div>
+              <div class="field" id="f-empresa">
+                <label for="empresa">Empresa ou marca <span class="req">*</span></label>
+                <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Nome do negócio">
+                <div class="err" id="e-empresa" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="field" id="f-link">
+              <label for="link">Site ou Instagram do negócio <span class="req">*</span></label>
+              <input type="text" id="link" name="link" autocomplete="url" inputmode="url" autocapitalize="off" spellcheck="false" placeholder="@suaempresa ou suaempresa.com.br">
+              <div class="err" id="e-link" aria-live="polite"></div>
+            </div>
+
+            <div class="two">
+              <fieldset class="field" id="f-perfil">
+                <legend>Você é <span class="req">*</span></legend>
+                <div class="pills">
+                  <label class="pill"><input type="radio" name="perfil" id="perfil-1" value="Empresa"><span>Empresa</span></label>
+                  <label class="pill"><input type="radio" name="perfil" id="perfil-2" value="Autônomo(a)"><span>Autônomo(a)</span></label>
+                </div>
+                <div class="err" id="e-perfil" aria-live="polite"></div>
+              </fieldset>
+              <div class="field" id="f-segmento">
+                <label for="segmento">Segmento <span class="req">*</span></label>
+                <input type="text" id="segmento" name="segmento" placeholder="Ex.: clínica, consultoria, loja">
+                <div class="err" id="e-segmento" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <fieldset class="field" id="f-busca">
+              <legend>O que você busca? <span class="req">*</span></legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="busca" id="busca-1" value="Branding e posicionamento"><span>Branding</span></label>
+                <label class="pill"><input type="radio" name="busca" id="busca-2" value="Arquitetura de vendas"><span>Vendas</span></label>
+                <label class="pill"><input type="radio" name="busca" id="busca-3" value="Diagnóstico"><span>Diagnóstico</span></label>
+                <label class="pill"><input type="radio" name="busca" id="busca-4" value="Ainda não sei"><span>Ainda não sei</span></label>
+              </div>
+              <div class="err" id="e-busca" aria-live="polite"></div>
+            </fieldset>
+
+            <div class="field" id="f-problema">
+              <label for="problema">Qual é o maior problema do negócio hoje? <span class="req">*</span></label>
+              <textarea id="problema" name="problema" maxlength="600" placeholder="Ex.: vendo bem, mas no fim do mês o lucro some."></textarea>
+              <div class="count" id="count" aria-live="polite">mínimo 30 caracteres</div>
+              <div class="err" id="e-problema" aria-live="polite"></div>
+            </div>
+
+            <div class="field" id="f-ok">
+              <label class="check"><input type="checkbox" id="ok" name="ok"><span>Sei que os valores são sob consulta.</span></label>
+              <div class="err" id="e-ok" aria-live="polite"></div>
+            </div>
+
+            <button class="btn btn-dark submit" type="submit">Continuar no WhatsApp <span aria-hidden="true">→</span></button>
+            <p class="fine">Resposta pessoal, feita por mim.</p>
+          </form>
+
+          <div class="done" id="done" hidden>
+            <div class="done-top">
+              <div class="arch mini"><img src="img/enviar.jpg" alt="Daiana com a mão no pescoço" width="900" height="1125"></div>
+              <div>
+                <span class="eyebrow">Recebi seus dados</span>
+                <h3>Agora é só <em class="s">enviar.</em></h3>
+              </div>
+            </div>
+            <p id="done-text"></p>
+            <pre id="preview"></pre>
+            <div class="row">
+              <a class="btn btn-dark" id="wa" href="#" target="_blank" rel="noopener">Abrir o WhatsApp <span aria-hidden="true">→</span></a>
+              <button class="btn btn-light" type="button" id="copy">Copiar mensagem</button>
+            </div>
+            <p class="status" id="status" aria-live="polite"></p>
+            <button class="link-btn" type="button" id="edit">Editar minhas respostas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>Daiana Souza · Ativos Digitais Pro</p>
+    <p>Estratégia de marca e vendas</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ===== CONFIGURAÇÃO ===== */
+  // Número do WhatsApp com 55 + DDD + número, só dígitos (ex.: "5511999999999").
+  var WHATSAPP_NUMBER = "5511947556629";
+  // Link do Apps Script da planilha (termina em /exec).
+  var SHEETS_URL = "";
+  var QR_LINK = "https://wa.me/qr/B7TK6KDSIT3QP1";
+  /* ======================== */
+
+  var form = document.getElementById("lead");
+  var done = document.getElementById("done");
+  var problema = document.getElementById("problema");
+  var count = document.getElementById("count");
+  var MIN = 30;
+  var message = "";
+
+  problema.addEventListener("input", function(){
+    var n = problema.value.trim().length;
+    count.textContent = n >= MIN ? n + " caracteres" : n + " / mínimo " + MIN + " caracteres";
+  });
+  function radio(name){ var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ""; }
+  function setErr(key, msg){
+    document.getElementById("e-" + key).textContent = msg || "";
+    document.getElementById("f-" + key).classList.toggle("invalid", !!msg);
+    return !msg;
+  }
+  function validLink(v){
+    v = v.trim();
+    if (!v || /ativosdigitais\.pro/i.test(v)) return false;
+    if (/^@[a-z0-9._]{2,30}$/i.test(v)) return true;
+    if (/instagram\.com\/[a-z0-9._]{2,30}/i.test(v)) return true;
+    return /^(https?:\/\/)?(www\.)?([a-z0-9-]+\.)+[a-z]{2,}(\/\S*)?$/i.test(v);
+  }
+  function saveToSheet(d){
+    if (!SHEETS_URL) return;
+    try {
+      fetch(SHEETS_URL, {method: "POST", mode: "no-cors", keepalive: true,
+        headers: {"Content-Type": "text/plain;charset=utf-8"}, body: JSON.stringify(d)});
+    } catch (e) {}
+  }
+
+  form.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var d = {
+      nome: document.getElementById("nome").value.trim(),
+      empresa: document.getElementById("empresa").value.trim(),
+      link: document.getElementById("link").value.trim(),
+      perfil: radio("perfil"),
+      segmento: document.getElementById("segmento").value.trim(),
+      busca: radio("busca"),
+      problema: problema.value.trim()
+    };
+    var ok = [
+      setErr("nome", d.nome.length < 2 ? "Escreva seu nome." : ""),
+      setErr("empresa", d.empresa.length < 2 ? "Escreva o nome do negócio." : ""),
+      setErr("link", !validLink(d.link) ? "Informe o @ do Instagram (ex.: @suaempresa) ou o site (ex.: suaempresa.com.br)." : ""),
+      setErr("perfil", !d.perfil ? "Escolha uma opção." : ""),
+      setErr("segmento", d.segmento.length < 3 ? "Conte em que área o negócio atua." : ""),
+      setErr("busca", !d.busca ? "Escolha uma opção." : ""),
+      setErr("problema", d.problema.length < MIN ? "Conte um pouco mais. Faltam " + (MIN - d.problema.length) + " caracteres." : ""),
+      setErr("ok", !document.getElementById("ok").checked ? "Marque para continuar." : "")
+    ];
+    if (ok.indexOf(false) !== -1){
+      var first = form.querySelector(".invalid");
+      if (first){ first.scrollIntoView({behavior: "smooth", block: "center"}); var i = first.querySelector("input,textarea"); if (i) i.focus({preventScroll: true}); }
+      return;
+    }
+
+    message =
+      "Oi, Daiana! Vim pela sua página.\n\n" +
+      "*Nome:* " + d.nome + "\n" +
+      "*Empresa/marca:* " + d.empresa + "\n" +
+      "*Site/Instagram:* " + d.link + "\n" +
+      "*Perfil:* " + d.perfil + "\n" +
+      "*Segmento:* " + d.segmento + "\n" +
+      "*Busco:* " + d.busca + "\n" +
+      "*Maior desafio:* " + d.problema;
+
+    saveToSheet(d);
+
+    var wa = document.getElementById("wa"), text = document.getElementById("done-text");
+    document.getElementById("preview").textContent = message;
+    form.hidden = true; done.hidden = false;
+    if (WHATSAPP_NUMBER){
+      var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      wa.href = url;
+      text.textContent = "Se o WhatsApp não abrir sozinho, toque no botão. A mensagem já vai escrita.";
+      setTimeout(function(){ window.location.href = url; }, 400);
+    } else {
+      wa.href = QR_LINK;
+      text.textContent = "Copiei a mensagem pra você. Abra o WhatsApp, cole na conversa e envie.";
+      copy(true);
+    }
+    done.scrollIntoView({behavior: "smooth", block: "start"});
+  });
+
+  function copy(auto){
+    var status = document.getElementById("status");
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents(document.getElementById("preview"));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent = "Mensagem selecionada. Copie e cole no WhatsApp.";
+    }
+    try { navigator.clipboard.writeText(message).then(function(){ status.textContent = "Mensagem copiada."; }, fallback); }
+    catch (e) { fallback(); }
+  }
+  document.getElementById("copy").addEventListener("click", function(){ copy(false); });
+  document.getElementById("edit").addEventListener("click", function(){
+    done.hidden = true; form.hidden = false; document.getElementById("status").textContent = "";
+    form.scrollIntoView({behavior: "smooth", block: "start"});
+  });
+})();
+</script>
+
+</body>
+</html>
